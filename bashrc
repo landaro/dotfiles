@@ -31,6 +31,11 @@ export PASSWORD_STORE_DIR=/home/jonas/.password-store
 eval "$(thefuck --alias)"
 eval "$(thefuck --alias ff)"
 
+# setup pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # Load aliases
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
