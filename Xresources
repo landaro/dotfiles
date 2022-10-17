@@ -30,13 +30,14 @@ URxvt*boldFont: xft:InconsolataLGC\ Nerd\ Font:size=11:bold:antialias=true:hinti
 
 URxvt*iconFile: /usr/share/icons/Faience/apps/scalable/terminal.svg
 
-URxvt.perl-ext-common: default,keyboard-select,url-select,clipboard,confirm-paste,resize-font
+URxvt.perl-ext-common: default,keyboard-select,url-select,clipboard,confirm-paste,resize-font,matcher
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.M-v: perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-URxvt.urlLauncher: firefox
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1
 URxvt.underlineURLs: true
 
 URxvt.visualBell: false
