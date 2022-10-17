@@ -11,3 +11,6 @@ alias unsafe_ssh='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul
 
 # docker tricks
 alias dockviz='docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz images --tree'
+
+# task, but with alternate configuration
+alias ttask='TASKRC=~/.config/task/taskrc-test task'
