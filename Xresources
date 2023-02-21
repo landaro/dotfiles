@@ -25,6 +25,8 @@ URxvt*scrollTtyOutput:      false
 URxvt*scrollWithBuffer:     true
 URxvt*scrollTtyKeypress:    true
 
+URxvt.geometry: 80x-1
+
 URxvt*font: xft:InconsolataLGC\ Nerd\ Font:size=11:antialias=true:hinting=true
 URxvt*boldFont: xft:InconsolataLGC\ Nerd\ Font:size=11:bold:antialias=true:hinting=true
 
