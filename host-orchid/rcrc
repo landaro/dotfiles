@@ -1,2 +1,4 @@
 DOTFILES_DIRS="${HOME}/.dotfiles"
 EXCLUDES="*:README.md"
+HOSTNAME="orchid"
+TAGS="gui"
