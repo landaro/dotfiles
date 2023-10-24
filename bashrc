@@ -41,5 +41,10 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
+# Load bash functions
+if [ -f ~/.bash_functions ]; then
+    source ~/.bash_functions
+fi
+
 # Enable direnv (NOTE: this needs to be late in the prompt config order!!)
 eval "$(direnv hook bash)"
