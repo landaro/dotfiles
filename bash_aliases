@@ -16,3 +16,4 @@ alias dockviz='docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock 
 alias ttask='TASKRC=~/.config/task/taskrc-test task'
 # shortcut for checking the daily task list
 alias tpt='task +PLANTODAY'
+alias ttr='task +TRIAGE'
