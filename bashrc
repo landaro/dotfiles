@@ -26,6 +26,11 @@ shopt -s checkwinsize
 export PASSWORD_STORE_X_SELECTION=primary
 export PASSWORD_STORE_DIR=/home/jonas/.password-store
 
+# restic backup default settings for home dir
+export RESTIC_REPOSITORY='/run/media/jonas/BACKUP/restic/orchid-home'
+export RESTIC_PASSWORD_COMMAND='/home/jonas/bin/get-restic-password'
+export RESTIC_COMPRESSION='auto' # off|auto|max
+export RESTIC_CACHE_DIR=~/.cache/restic
 
 # Enable command correction utility
 eval "$(thefuck --alias)"

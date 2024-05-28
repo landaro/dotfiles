@@ -71,5 +71,8 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=secrets)
 # start an ssh agent
 eval $(ssh-agent)
 
+# enable automounting of removable media from userspace
+udiskie --tray &
+
 # Finally, launch WM
 exec i3 >> ~/.i3log 2>&1
