@@ -9,8 +9,9 @@ XTerm*faceSize: 11
 
 
 
-
-URxvt*transparent: true
+! fake transparency (= copy background image, needs one to exist ofc.)
+!URxvt*transparent: true
+!URxvt*shading: 30
 
 URxvt*scrollBar: false
 
