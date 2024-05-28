@@ -11,6 +11,7 @@ export LANG="en_GB.utf8"
 # Some default applications
 export EDITOR="emacs"
 export TERM="rxvt-unicode"
+export XTERM="urxvt"
 if [ -n "$DISPLAY" ]; then
     BROWSER=firefox
 fi
