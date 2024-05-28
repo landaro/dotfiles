@@ -72,4 +72,4 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=secrets)
 eval $(ssh-agent)
 
 # Finally, launch WM
-exec i3 -V >> ~/i3log 2>&1
+exec i3 >> ~/.i3log 2>&1
