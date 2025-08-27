@@ -32,6 +32,9 @@ export RESTIC_PASSWORD_COMMAND='/home/jonas/bin/get-restic-password'
 export RESTIC_COMPRESSION='auto' # off|auto|max
 export RESTIC_CACHE_DIR=~/.cache/restic
 
+# MAC dev env vars
+export MAC_KTM_WORKTREE='/home/jonas/workspace/mac/ktm'
+
 # Enable command correction utility
 eval "$(thefuck --alias)"
 eval "$(thefuck --alias ff)"
