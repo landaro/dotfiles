@@ -2,6 +2,10 @@
 
 ***Disclaimer:*** This repo is currently setup up as a backup for a single instance, so there is no use of tagging and/or host specific settings in use. We may refine this later.
 
+## Deprecation Note
+
+*I am moving to a chezmoi setup. This is preserved to facilitate the migration, and then archived for reference purposes. Actual dotfile content found here is therefore going to be stale!*
+
 ## Setup
 
 1. Establish PKI git access to github.com (install git, create keypair, etc.)
