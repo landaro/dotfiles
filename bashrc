@@ -53,3 +53,5 @@ fi
 
 # Enable direnv (NOTE: this needs to be late in the prompt config order!!)
 eval "$(direnv hook bash)"
+
+complete -C /usr/bin/terraform terraform
