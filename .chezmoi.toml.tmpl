@@ -1,0 +1,13 @@
+{{- $gitEmail := promptStringOnce . "git.email" "Git Email address" -}}
+{{- $gitAuthor := promptStringOnce . "git.author" "Git Author" -}}
+
+# Configure umask behaviour correctly for linux hosts
+{{ if eq .chezmoi.hostname "orchid" -}}
+umask = 0o077
+{{ else if eq .chezmoi.hostname "saguaro" -}}
+umask = 0o027
+{{ end -}}
+
+[data.git]
+    email  = {{ $gitEmail | quote }}
+    author = {{ $gitAuthor | quote }}
