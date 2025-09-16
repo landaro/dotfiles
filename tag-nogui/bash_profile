@@ -1,9 +1,0 @@
-#
-# ~/.bash_profile
-#
-
-# Load initialisation for non-bash login shells
-[[ -f ~/.profile ]] && . ~/.profile
-
-# Load initialisation for bash non-login shells
-[[ -f ~/.bashrc ]] && . ~/.bashrc
