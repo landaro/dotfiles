@@ -23,6 +23,7 @@
         po = push origin # a short form to push a single ref to origin (usually for specific tags)
         fp = push --force-with-lease
         local-branches = "!git branch --format '%(refname:short) %(upstream:short)' | awk '{if (!$2) print $1;}'"
+{{ if eq .chezmoi.hostname "orchid" -}}
 [core]
         ignorecase = false
         excludesfile = ~/.gitignore
@@ -65,3 +66,4 @@
         smudge = git-lfs smudge -- %f
         process = git-lfs filter-process
         required = true
+{{ end -}}
