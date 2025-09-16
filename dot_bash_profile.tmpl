@@ -8,7 +8,9 @@
 # Load initialisation for bash non-login shells
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+{{ if eq .chezmoi.hostname "orchid" -}}
 # Now vector to X Server session ...
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
     exec startx
 fi
+{{ end -}}

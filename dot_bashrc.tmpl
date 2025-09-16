@@ -5,9 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Enable additional bash completions from package "bash-completion"
-# TODO
-
 # Enable git prompt
 source /usr/share/git/completion/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
@@ -22,6 +19,7 @@ shopt -s histappend
 # Layouting
 shopt -s checkwinsize
 
+{{ if eq .chezmoi.hostname "orchid" -}}
 # Password Store configs
 export PASSWORD_STORE_X_SELECTION=primary
 export PASSWORD_STORE_DIR=/home/jonas/.password-store
@@ -44,6 +42,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+complete -C /usr/bin/terraform terraform
+{{ end }}
 # Load aliases
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
@@ -54,7 +54,7 @@ if [ -f ~/.bash_functions ]; then
     source ~/.bash_functions
 fi
 
+{{ if eq .chezmoi.hostname "orchid" -}}
 # Enable direnv (NOTE: this needs to be late in the prompt config order!!)
 eval "$(direnv hook bash)"
-
-complete -C /usr/bin/terraform terraform
+{{ end -}}

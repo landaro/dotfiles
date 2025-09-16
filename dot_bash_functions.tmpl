@@ -15,6 +15,13 @@ mcd () {
     cd $1
 }
 
+# Copies a fully resolved path to the X clipboard
+# Depends on:  xclip
+# $1:          the path that should be resolved and copied
+function copypath(){
+    realpath "$1" | xclip -selection clipboard
+}
+
 # $1:     should be a drive uuid, such as that reported by blkid
 # return: return value of 0 if mounted, 1 if not mounted
 function is_mounted_by_uuid() {
