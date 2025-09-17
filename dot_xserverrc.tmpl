@@ -1,0 +1,4 @@
+{{- if eq .chezmoi.hostname "orchid" -}}
+#!/bin/sh
+exec /usr/bin/Xorg -nolisten tcp -nolisten local "$@" vt$XDG_VTNR
+{{- end }}

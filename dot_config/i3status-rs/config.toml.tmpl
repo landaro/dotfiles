@@ -1,0 +1,123 @@
+{{- if ne .chezmoi.hostname "orchid" }}
+#
+# DEPRECTAED: use waybar instead
+#
+{{- end -}}
+[theme]
+theme = "solarized-dark"
+[theme.overrides]
+idle_bg = "#383c4a"
+idle_fg = "#f2f2f2"
+info_bg = "#b6defb"
+info_fg = "#383c4a"
+good_bg = "#c3f786"
+good_fg = "#383c4a"
+warning_bg = "#fcfbcc"
+warning_fg = "#383c4a"
+critical_bg = "#f99286"
+critical_fg = "#383c4a"
+
+[icons]
+icons = "awesome4"
+
+[[block]]
+block = "sound"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "bluetooth"
+mac = "CC:98:8B:56:E8:A9"
+format = "$icon WH-1000XM3 "
+disconnected_format ="$icon HS "
+
+[[block]]
+block = "bluetooth"
+mac = "24:81:C7:72:14:7F"
+format = "$icon HUAWEI FreeBuds SE 2 "
+disconnected_format ="$icon BUDS "
+
+[[block]]
+block = "music"
+player = "spotify"
+
+[[block]]
+block = "disk_space"
+path = "/"
+format = "$icon $used/$total ($percentage free) "
+info_type = "available"
+alert_unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+
+[[block]]
+block = "memory"
+format = "$icon $mem_total_used_percents.eng(w:2) "
+format_alt = "$icon_swap $swap_used_percents.eng(w:2) "
+
+[[block]]
+block = "cpu"
+
+[[block]]
+block = "load"
+
+[[block]]
+block = "service_status"
+service = "restic-backup"
+active_format = "^icon_cogs r-bu "
+inactive_format = "^icon_cogs r-bu "
+active_state = "Good"
+inactive_state = "Idle"
+
+[[block]]
+block = "net"
+device = "enp0s31f6"
+format = "$icon {$ip | NA} "
+interval = 5
+
+[[block]]
+block = "net"
+device = "wlp3s0"
+#format = "$icon {$ssid $signal_strength $ip | NA} "
+format = "$icon  $ssid $signal_strength $ip "
+interval = 5
+
+[[block]]
+block = "taskwarrior"
+interval = 60
+format = "$count open tasks ($filter_name) "
+format_singular = "$count open task ($filter_name) "
+format_everything_done = "nothing to do! "
+warning_threshold = 10
+critical_threshold = 20
+[[block.filters]]
+name = "this week"
+filter = "+WEEK or +OVERDUE"
+[[block.filters]]
+name = "overdue"
+filter = "+OVERDUE"
+
+#[[block]]
+#block = "taskwarrior"
+#interval = 60
+#format = "of $count ($filter_name) "
+#format_singular = "of $count ($filter_name) "
+#format_everything_done = " of NONE "
+#warning_threshold = 50
+#critical_threshold = 100
+#[[block.filters]]
+#name = "total"
+#filter = "-COMPLETED -DELETED"
+
+[[block]]
+block = "battery"
+device = "BAT0"
+interval = 10
+format = "$percentage $time "
+
+[[block]]
+block = "time"
+interval = 10
+format = "$timestamp.datetime(f:'%a %d/%m %R') "
