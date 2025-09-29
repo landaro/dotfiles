@@ -1,0 +1,30 @@
+[general]
+import = [
+      # Theme. Uncomment the catppuccin flavour you want below (add symlink if needed):
+      # "~/.config/alacritty/catppuccin-latte.toml"
+      "~/.config/alacritty/catppuccin-frappe.toml"
+      # "~/.config/alacritty/catppuccin-macchiato.toml"
+      # "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[window]
+opacity = 1
+
+[font]
+size = 11.0
+
+[font.bold]
+family = "Inconsolata LGC Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Inconsolata LGC Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Inconsolata LGC Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "Inconsolata LGC Nerd Font Mono"
+style = "Regular"
