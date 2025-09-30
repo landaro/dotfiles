@@ -1,0 +1,5 @@
+{{- if eq .chezmoi.hostname "orchid" -}}
+#!/bin/bash
+PASSWORD_STORE_DIR=/home/jonas/workspace/secrets
+pass show gitlab.io.ki/personal-token | head -n 1
+{{- end }}

@@ -1,0 +1,11 @@
+{{- if eq .chezmoi.hostname "orchid" -}}
+[global]
+default = ioki
+ssl_verify = true
+timeout = 5
+
+[ioki]
+url = https://gitlab.io.ki
+private_token = helper: /home/jonas/bin/extract-personal-ioki-gitlab-token.sh
+api_version = 4
+{{- end }}
