@@ -1,0 +1,6 @@
+# ignore emacs tmp files
+*~
+
+# ignore flymd tmp files
+flymd.html
+flymd.md

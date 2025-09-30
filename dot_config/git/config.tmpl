@@ -23,11 +23,11 @@
         po = push origin # a short form to push a single ref to origin (usually for specific tags)
         fp = push --force-with-lease
         local-branches = "!git branch --format '%(refname:short) %(upstream:short)' | awk '{if (!$2) print $1;}'"
-{{ if eq .chezmoi.hostname "orchid" -}}
 [core]
         ignorecase = false
-        excludesfile = ~/.gitignore
+        excludesfile = ~/.config/git/ignore
         editor = emacs
+{{- if eq .chezmoi.hostname "orchid" }}
         pager = delta
 #       sshCommand = ssh -i ~/.ssh/github_id_rsa -i ~/.ssh/gitlab_id
 [interactive]
