@@ -1,12 +1,10 @@
 # My .dotfiles
 
-***Disclaimer:*** This repo is currently setup up as a backup for a single instance, so there is no use of tagging and/or host specific settings in use. We may refine this later.
-
 ## Deprecation Note
 
-*I am moving to a chezmoi setup. This is preserved to facilitate the migration, and then archived for reference purposes. Actual dotfile content found here is therefore going to be stale!*
+*I have fully moved all exisiting rcm tracked configs to a chezmoi setup. This branch marks the endpoint of the migration process. This README is the last leftover and preserved for posteriority. For earlier states, move back along this branch (`main-rcm`), probably up to `last-functional-rcm`*
 
-## Setup
+## Setup (historic)
 
 1. Establish PKI git access to github.com (install git, create keypair, etc.)
 
