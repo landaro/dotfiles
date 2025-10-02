@@ -28,7 +28,7 @@ set $right l
 # Your preferred terminal emulator (default: foot)
 set $term alacritty
 # Your preferred application launcher (default: wmenu-run)
-set $menu wofi --show=drun --lines=5 --prompt=""
+set $menu wofi --style ~/style/catppuccin/wofi/src/frappe/style.css --show=drun --lines=5 --prompt=""
 
 ### Output configuration
 #
